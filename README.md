@@ -13,6 +13,6 @@ You can see that plaintext is digested to encrypted text
 and if you want to decrypt text
 Alt + F8> Run Macro "DecA"> input password you want
 
-I am in Republic of Korea(south) and if you are interested, please contact me by email (please do not include attachments in email, I will not open it)
+I am in Republic of Korea(south) and if you are interested, please contact me 
 
-The source code is a .bas file.
+ps. The source code is a .bas file. (.xlsm is executable excel file and there are some explaination in it)
