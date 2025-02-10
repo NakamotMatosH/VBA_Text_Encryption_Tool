@@ -1,27 +1,60 @@
 
-VBA_Text_Encryption_Tool
+# VBA Text Encryption Tool
 
-This tool allows you to use the VBA (macro) functionality in MS Excel to encrypt cryptocurrency wallet addresses, website passwords, or any text you want to secure (e.g., diary entries, private secrets). While there are many encryption algorithms available online, my approach is uniquely implemented, offering a different method than conventional algorithms.
+## 프로젝트 개요
+이 도구는 **MS Excel의 VBA(매크로) 기능을 사용해 간단하고 유연한 암호화 기능을 제공**합니다. 기존 표준 암호화 알고리즘 대신 **독창적으로 구현된 사용자 정의 알고리즘**을 사용해 데이터를 보호합니다. **텍스트 기반의 데이터 보호**가 필요할 때 쉽고 빠르게 사용할 수 있는 점이 큰 장점입니다.
 
-How to Use:
+## 주요 기능 및 특장점
+1. **Excel 내 통합된 암호화/복호화 시스템**
+   - 별도의 외부 프로그램 설치 없이 **엑셀 환경에서 직접 암호화 작업**을 수행할 수 있습니다.
+   - **VBA 매크로**만으로 구현되어 가벼운 사용이 가능하며, 코드 확장이 쉽습니다.
 
-1. Open the tool file: Encryption_Tool.xlsm
+2. **독자적인 알고리즘으로 유연성 제공**
+   - 기존 AES, RSA와 같은 표준화된 암호화 방식 대신, **사용자가 직접 알고리즘을 수정하고 커스터마이징할 수 있는 환경**을 제공합니다.
+   - **고정된 키값 대신 동적으로 생성된 키값 사용 가능**, 특정 사용 시나리오에 맞춘 커스터마이징에 용이합니다.
 
+3. **자동화 지원**
+   - **`EncAuto.bas`**를 통해 대량의 데이터를 반복적으로 암호화할 수 있는 **자동화 기능**이 내장되어 있습니다.
 
-2. Type the plain text (anything you want to encrypt).
+4. **직관적인 사용**
+   - 암호화/복호화 버튼을 클릭하기만 하면 결과를 얻을 수 있어 **비전문가도 쉽게 사용**할 수 있습니다.
+   - **시각적 피드백**이 제공되어 결과를 즉시 확인할 수 있습니다.
 
+---
 
-3. Press Alt + F8 and run the macro "EncA." Enter the password of your choice.
-The plain text will be encrypted into ciphertext.
+## 주요 파일 설명
+- **`EnCryptionSource.Bas`**
+  - 암호화 및 복호화의 핵심 소스 코드가 포함된 모듈입니다.
+  - `EncryptText(text As String) As String`: 입력된 문자열을 암호화합니다.
+  - `DecryptText(encryptedText As String) As String`: 암호화된 문자열을 복호화합니다.
 
+- **`EncAuto.bas`**
+  - 대량의 텍스트를 자동으로 암호화할 수 있는 자동화 기능을 제공합니다.
 
-4. To decrypt the text, press Alt + F8 again, run the macro "DecA," and enter the password you used for encryption.
+- **`Encryption Tool.xlsm`**
+  - 사용자 인터페이스가 포함된 엑셀 파일로, 매크로 버튼을 통해 암호화 및 복호화를 쉽게 수행할 수 있습니다.
 
+---
 
+## 사용 방법
+1. **`Encryption Tool.xlsm` 파일을 엽니다.**
+   엑셀 보안 설정에서 매크로 사용을 허용해야 합니다.
 
-If you're interested or have any questions, feel free to contact me. I'm based in South Korea.
+2. **암호화할 텍스트 입력**
+   텍스트 입력란에 암호화할 데이터를 입력합니다.
 
-P.S. The source code is provided as a .bas file, and the .xlsm file contains explanations and is executable in Excel.
+3. **암호화 버튼 클릭**
+   암호화된 결과가 지정된 결과 영역에 표시됩니다. 복호화도 동일한 방식으로 수행할 수 있습니다.
 
+---
 
+## 설치 및 실행 환경
+- **필수 소프트웨어**: MS Excel 2016 이상
+- **매크로 허용**: 엑셀 보안 설정에서 매크로 사용을 반드시 허용해야 합니다.
 
+---
+
+## 향후 개선 및 추가할 기능
+1. **다양한 텍스트 형식 지원**: JSON, XML, CSV 파일 암호화 지원
+2. **GUI 개선**: 사용자 경험 향상을 위한 직관적인 인터페이스 추가
+3. **로그 관리**: 암호화 및 복호화 이력 관리 기능
